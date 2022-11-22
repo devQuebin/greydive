@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import items from "./items";
+import Header from "./components/Header";
+import Tester from "./components/Tester";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header items={items} />
+      <Routes>
+        {items.map((item, i) => {
+          return (
+            <Route
+              path={`/tester${i + 1}`}
+              key={item.idVideo}
+              element={<Tester item={item} />}
+            />
+          );
+        })}
+      </Routes>
+    </Router>
   );
 }
-
 export default App;
