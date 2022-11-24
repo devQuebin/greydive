@@ -1,11 +1,11 @@
 import "../App.css";
 
-const Tester = ({ item }) => {
+const Tester = ({ item, index }) => {
   return (
     <div>
       <h2>Nombre Cliente: {item.cliente}</h2>
       <h2>Test: Test de usabilidad en el sitio web</h2>
-      <h2>Tester #</h2>
+      <h2>Tester #{index + 1}</h2>
       <h2>Video</h2>
       <video className="video" width="320" height="240" controls>
         <source src={item.linkVideo} type="video/mp4" />

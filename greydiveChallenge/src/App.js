@@ -14,7 +14,7 @@ function App() {
             <Route
               path={`/tester${i + 1}`}
               key={item.idVideo}
-              element={<Tester item={item} />}
+              element={<Tester item={item} index={i} />}
             />
           );
         })}
