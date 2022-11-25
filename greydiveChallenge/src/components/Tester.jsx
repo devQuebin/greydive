@@ -2,7 +2,7 @@ import "../App.css";
 
 const Tester = ({ item, index }) => {
   return (
-    <div>
+    <div className="tester">
       <h2>Nombre Cliente: {item.cliente}</h2>
       <h2>Test: Test de usabilidad en el sitio web</h2>
       <h2>Tester #{index + 1}</h2>
@@ -15,18 +15,16 @@ const Tester = ({ item, index }) => {
       <h2>Tareas</h2>
       <p className="escenario">Escenario: {item.escenario}</p>
       <hr />
-      <p>
-        {item.preguntas.map((preg, i) => (
-          <div>
-            <p>Tarea {i + 1}</p>
-            <p>{preg.texto}</p>
-            <p>{preg.tipoTarea}</p>
-            <p>{preg.respuesta}</p>
-            <p>{preg.tiempo}</p>
-            <hr />
-          </div>
-        ))}
-      </p>
+      {item.preguntas.map((preg, i) => (
+        <div className="tareas">
+          <p>Tarea {i + 1}</p>
+          <p>{preg.texto}</p>
+          <p>{preg.tipoTarea}</p>
+          <p>{preg.respuesta}</p>
+          <p>{preg.tiempo}</p>
+          <hr />
+        </div>
+      ))}
     </div>
   );
 };

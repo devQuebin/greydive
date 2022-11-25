@@ -9,6 +9,10 @@
   padding: 5px 10%;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .logo {
   height: 33px;
   margin-right: auto;
@@ -24,7 +28,8 @@
 }
 
 .header .nav-links .link {
-  font-size: 700;
+  font-size: 1.5em;
+  font-weight: 700;
   color: white;
   text-decoration: none;
 }
@@ -37,7 +42,6 @@ body {
 .video {
   height: 480px;
   width: auto;
-  padding: 50px;
 }
 
 .transcripcion {
@@ -58,6 +62,6 @@ body {
   color: white;
 }
 
-h2 {
-  padding-left: 50px;
+.tester {
+  padding: 20px;
 }
